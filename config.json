@@ -1,0 +1,4 @@
+{
+    "connectionString" : "mongodb://admin:admin@ds245687.mlab.com:45687/musictype",
+	"port" : "6969"
+}
