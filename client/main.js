@@ -3,16 +3,20 @@ var KT = {};
 // configs
 // Define our 'global' variable
 KT.configs = {
-    GAME_WIDTH: 768,
-    GAME_HEIGHT: 1366
+    GAME_WIDTH: 640,
+    GAME_HEIGHT: 1136,
+    GAME_TIME_TO_OVERLAP: 180,
+    TIMEOUT : false,
+    HEIGHT_TOOL: 75
 };
 window.onload = function () {
-    KT.game = new Phaser.Game(KT.configs.GAME_WIDTH, KT.configs.GAME_HEIGHT, Phaser.CANVAS, '', null, false, false);
+    KT.game = new Phaser.Game(KT.configs.GAME_WIDTH, KT.configs.GAME_HEIGHT, Phaser.AUTO, '', null, false, false);
     // Add all the states
     KT.game.state.add('boot', bootState);
     KT.game.state.add('load', loadState);
     KT.game.state.add('menu', menuState);
     KT.game.state.add('play', playState);
+    KT.game.state.add('test', testState);
     // Start the 'boot' state
     KT.game.state.start('boot');
 }

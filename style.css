@@ -26,3 +26,8 @@
     width: 30px;
     height: 30px;
 }
+#form{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
